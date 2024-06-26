@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.Set;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -49,4 +51,11 @@ public class CompanyEntity {
 
     @Column(nullable = false, unique = true)
     private String email;
+
+    @OneToMany(mappedBy = "company")
+    private Set<PerfilEntity> perfilEntities;
+
+    @OneToMany(mappedBy = "company")
+
+    private Set<ProductEntity> productEntities;
 }

@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1/company")
 @RestController
 public class CompanyController {
-@Autowired
+    @Autowired
     CompanyRepository companyRepository;
 
     @PostMapping
 
-    public ResponseEntity<?> saveCompany(@RequestBody CompanyEntity companyEntity){
+    public ResponseEntity<?> saveCompany(@RequestBody CompanyEntity companyEntity) {
         return new ResponseEntity<>(companyRepository.save(companyEntity), HttpStatus.CREATED);
 
     }
@@ -25,11 +25,9 @@ public class CompanyController {
     @GetMapping
 
 
-
-    public ResponseEntity<?> findAll(){
+    public ResponseEntity<?> findAll() {
         return new ResponseEntity<>(companyRepository.findAll(), HttpStatus.OK);
     }
-
 
 
 }

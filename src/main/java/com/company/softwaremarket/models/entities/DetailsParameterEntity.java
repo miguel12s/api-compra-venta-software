@@ -15,17 +15,6 @@ import java.util.Set;
 @ToString
 @Entity
 @Table(name="details_parameter",indexes = @Index(name="idx_value_detail",columnList = "value_detail"))
-
-//
-// "parameter":{
-//         "id": "PAIS",
-//         "parameterName": "nombre de paises",
-//         "description": "nombre de paises"
-//         },
-//
-//         "description":"colombia",
-//         "valueDetail":"CO"
-
 public class DetailsParameterEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,6 +30,16 @@ public class DetailsParameterEntity {
     private Set<CompanyEntity> companyEntitySet;
     @OneToMany(mappedBy = "department")
     private Set<CompanyEntity> companyEntity;
+
+    @OneToMany(mappedBy = "typeDocumentIndex")
+
+    private Set<UserEntity> userEntities;
+
+    @OneToMany(mappedBy="state")
+    private Set<PerfilEntity> perfilEntities;
+
+    @OneToMany(mappedBy="state")
+    private Set<ProductEntity> productEntities;
 
 
 }
