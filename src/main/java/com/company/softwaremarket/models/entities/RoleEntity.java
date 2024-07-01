@@ -1,11 +1,11 @@
 package com.company.softwaremarket.models.entities;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
 import java.util.Set;
 
 @Entity
@@ -25,8 +25,6 @@ public class RoleEntity {
     @Enumerated(EnumType.STRING)
 private RoleEnum roleName;
 
-    @OneToMany(mappedBy = "rol")
-    private Set<PerfilEntity> perfiles;
 
 
 

@@ -1,6 +1,6 @@
 package com.company.softwaremarket.controller;
 
-import com.company.softwaremarket.dto.RoleDto;
+import com.company.softwaremarket.dto.ResponseDto;
 import com.company.softwaremarket.models.entities.DetailsParameterEntity;
 import com.company.softwaremarket.services.impl.DetailParamterServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +29,10 @@ public class DetailParameterController {
         if(detailParameterService.existById(id)){
             return new ResponseEntity<>(detailParameterService.save(parameter), HttpStatus.CREATED);
         }
-        RoleDto roleDto= RoleDto.builder()
-                .messageError("parameter details not found")
+        ResponseDto responseDto= ResponseDto.builder()
+                .message("parameter details not found")
+                .code(400)
                 .build();
-        return new ResponseEntity<>(roleDto, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(responseDto, HttpStatus.NOT_FOUND);
     }
 }

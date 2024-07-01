@@ -26,20 +26,20 @@ public class DetailsParameterEntity {
     private String description;
     @Column(nullable=false,name="value_detail")
     private String valueDetail;
-    @OneToMany(mappedBy = "country")
-    private Set<CompanyEntity> companyEntitySet;
-    @OneToMany(mappedBy = "department")
-    private Set<CompanyEntity> companyEntity;
-
-    @OneToMany(mappedBy = "typeDocumentIndex")
-
-    private Set<UserEntity> userEntities;
-
-    @OneToMany(mappedBy="state")
-    private Set<PerfilEntity> perfilEntities;
-
-    @OneToMany(mappedBy="state")
-    private Set<ProductEntity> productEntities;
-
+//    @OneToMany(mappedBy = "country")
+//    private Set<CompanyEntity> companyEntitySet;
+//    @OneToMany(mappedBy = "department")
+//    private Set<CompanyEntity> companyEntity;
+//
+//    @OneToMany(mappedBy = "typeDocumentIndex")
+//
+//    private Set<UserEntity> userEntities;
+//
+//    @OneToMany(mappedBy="state")
+//    private Set<PerfilEntity> perfilEntities;
+//
+//    @OneToMany(mappedBy="state")
+//    private Set<ProductEntity> productEntities;
+//
 
 }

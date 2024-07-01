@@ -52,10 +52,10 @@ public class CompanyEntity {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "company")
-    private Set<PerfilEntity> perfilEntities;
-
-    @OneToMany(mappedBy = "company")
-
-    private Set<ProductEntity> productEntities;
+//    @OneToMany(mappedBy = "company")
+//    private Set<PerfilEntity> perfilEntities;
+//
+//    @OneToMany(mappedBy = "company")
+//
+//    private Set<ProductEntity> productEntities;
 }
