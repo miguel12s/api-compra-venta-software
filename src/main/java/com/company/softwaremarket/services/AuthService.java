@@ -10,11 +10,12 @@ public class AuthService {
 
 
     public AuthResponse login() {
+        return null;
     }
 
     public AuthResponse register() {
 
-
+return null;
 
     }
 }
