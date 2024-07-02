@@ -26,6 +26,8 @@ public class DetailsParameterEntity {
     private String description;
     @Column(nullable=false,name="value_detail")
     private String valueDetail;
+
+    // CC
 //    @OneToMany(mappedBy = "country")
 //    private Set<CompanyEntity> companyEntitySet;
 //    @OneToMany(mappedBy = "department")

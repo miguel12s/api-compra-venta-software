@@ -24,6 +24,8 @@ public class CompanyEntity {
     private Long id;
 
     @ManyToOne
+
+    // colombia -
     @JoinColumn(name = "id_country", referencedColumnName = "value_detail")
     private DetailsParameterEntity country;
 
