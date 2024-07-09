@@ -6,6 +6,7 @@ import com.company.softwaremarket.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -26,7 +27,12 @@ public class UserImplService implements UserService {
     }
 
     @Override
-    public Set<UserEntity> findAll() {
-        return (Set<UserEntity>) userRepository.findAll();
+    public List<UserEntity> findAll() {
+        return (List<UserEntity>) userRepository.findAll();
+    }
+
+    @Override
+    public Set<String> findRoleByUserId(Long userId) {
+        return userRepository.findRoleByUserId(userId);
     }
 }

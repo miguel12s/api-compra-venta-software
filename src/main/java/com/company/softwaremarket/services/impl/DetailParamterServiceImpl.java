@@ -32,5 +32,10 @@ public class DetailParamterServiceImpl implements DetailParameterService {
     public Boolean existById(Long id) {
         return detailParameterRepository.existsById(id);
     }
+
+    @Override
+    public DetailsParameterEntity findByDescription(String description) {
+        return detailParameterRepository.findByDescription(description);
+    }
 }
 

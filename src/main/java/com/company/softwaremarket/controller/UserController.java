@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RequestMapping("api/v1/user")
@@ -18,7 +19,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public ResponseEntity<Set<UserEntity>> findAll(){
+    public ResponseEntity<List<UserEntity>> findAll(){
         return new ResponseEntity<>(userService.findAll(), HttpStatus.OK);
     }
 

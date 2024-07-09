@@ -6,6 +6,7 @@ import com.company.softwaremarket.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -21,8 +22,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Set<ProductEntity> findAll() {
-        return (Set<ProductEntity>) productRepository.findAll();
+    public List<ProductEntity> findAll() {
+        return (List<ProductEntity>) productRepository.findAll();
     }
 
     @Override

@@ -6,7 +6,8 @@ import com.company.softwaremarket.services.PerfilService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+
 
 @Service
 public class PerfilServiceImpl implements PerfilService {
@@ -16,8 +17,8 @@ public class PerfilServiceImpl implements PerfilService {
     private PerfilRepository perfilRepository;
 
     @Override
-    public Set<PerfilEntity> findAll() {
-        return (Set<PerfilEntity>) perfilRepository.findAll();
+    public List<PerfilEntity> findAll() {
+        return (List<PerfilEntity>) perfilRepository.findAll();
     }
 
     @Override
@@ -34,4 +35,6 @@ public class PerfilServiceImpl implements PerfilService {
     public Boolean existsById(Long id) {
         return perfilRepository.existsById(id);
     }
+
+
 }

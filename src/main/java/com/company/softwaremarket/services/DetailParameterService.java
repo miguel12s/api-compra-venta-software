@@ -10,6 +10,7 @@ public interface DetailParameterService {
     List<DetailsParameterEntity> findAll();
     DetailsParameterEntity findById(Long id);
     Boolean existById(Long id);
+    DetailsParameterEntity findByDescription(String description);
 
 
 }

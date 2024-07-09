@@ -2,10 +2,8 @@ package com.company.softwaremarket.models.entities;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+
 import java.util.Set;
 
 @Entity
@@ -14,6 +12,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Builder
 
 
 public class RoleEntity {
@@ -23,7 +22,7 @@ public class RoleEntity {
     private Long id;
     @Column(name="role_name")
     @Enumerated(EnumType.STRING)
-private RoleEnum roleName;
+    private RoleEnum roleName;
 
 
 
